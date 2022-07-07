@@ -1,4 +1,6 @@
 import './App.css';
+import SearchBar from '../SearchBar/SearchBar'
+import SearchResults from '../SearchResults/SearchResults';
 
 const App = () => {
   return (
@@ -7,8 +9,9 @@ const App = () => {
         Ja<span className="highlight">mmm</span>ing
       </h1>
       <div class="App">
-        Add a SearchBar component
-        <div className="App-playlist">Add a SearchResults component Add a Playlist component</div>
+        <SearchBar />
+        <div className="App-playlist">
+          <SearchResults /></div>
       </div>
     </div>
   );

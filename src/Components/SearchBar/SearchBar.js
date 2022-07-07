@@ -8,4 +8,6 @@ const SearchBar = () => {
       <button className="SearchButton">SEARCH</button>
     </div>
   );
-}
+};
+
+export default SearchBar
