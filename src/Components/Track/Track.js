@@ -1,19 +1,45 @@
 import './Track.css';
 
 
-const Track = () => {
+const Track = (props) => {
+    console.log('in Track: ',props)
+   const renderAction = () => {
+    if (props.isRemoval) {
+      return (
+        <button className="Track-action" onClick={removeTrack}>
+          -
+        </button>
+      );
+    } else {
+      return (
+        <button className="Track-action" onClick={addTrack}>
+          +
+        </button>
+      );
+    }
+    }
 
-const  renderAction = () =>{
+    const addTrack = (event) => {
+      props.onAdd(props.track);
+    }
 
-}
+    const removeTrack = (event) => {
+      props.onRemove(props.track);
+    }
 
-  return (
-    <div className="Track">
-      <div className="Track-information">
-        <h3> track name will go here </h3>
-        <p> track artist will go here | track album will go here </p>
+    //props = track.name, track.artist, track.album
+    return (
+      <div className="Track">
+        <div className="Track-information">
+          <h3>{props.track.name}</h3>
+          <p>
+            {props.track.artist} | {props.track.album}
+          </p>
+        </div>
+        {renderAction()}
       </div>
-      <button className="Track-action" onClick={this.renderAction}> + or - will go here </button>
-    </div>
-  );
+    );
+
 };
+
+export default Track
