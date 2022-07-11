@@ -1,14 +1,14 @@
 import TrackList from '../TrackList/TrackList';
 import './SearchResults.css';
 
-const SearchResults = (props) => {
-  console.log('In SearchResults: ', props)
+const SearchResults = ({searchResults, onAdd}) => {
+  
   return (
     <div className="SearchResults">
       <h2>Results</h2>
       <TrackList
-        tracks={props.searchResults}
-        onAdd={props.addTrack}
+        tracks={searchResults}
+        onAdd={onAdd}
         isRemoval={false} />
     </div>
   );

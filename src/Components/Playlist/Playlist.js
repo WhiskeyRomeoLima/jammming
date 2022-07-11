@@ -1,29 +1,28 @@
 import  './Playlist.css'
 import TrackList from '../TrackList/TrackList'
 
-//From app.js: props =  playlistName, playlistTrack, onRemove, onNameSave, onSave
-const Playlist = (props) => {
-  console.log('In Playlist: ', (props));
+//From app.js: props =  playlistName, playlistTracks, onRemove, onNameSave, onSave
+const Playlist = ({playlistName, playlistTracks, onNameChange, onAdd, onRemove, onSave}) => {
   
   const handleNameChange = (event) => {
-    props.onNameChange(event.target.value);
+    onNameChange(event.target.value);
   }
-
   
   return (
     <div className="Playlist">
       <input
         id="Playlist-name"
-        defaultValue={props.playlistName}
+        placeholder='Playlist Name'
+        defaultValue={playlistName}
         onChange={handleNameChange} />
       <TrackList
-        tracks={props.playlistTracks}
-        onAdd ={props.onAdd}
-        onRemove={props.onRemove}
+        tracks={playlistTracks}
+        onAdd={onAdd}
+        onRemove={onRemove}
         isRemoval={true} />
       <button
         className="Playlist-save"
-        onClick={props.onSave}>
+        onClick={onSave}>
         SAVE TO SPOTIFY
       </button>
     </div>

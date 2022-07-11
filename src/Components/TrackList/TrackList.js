@@ -4,20 +4,16 @@ import Track from '../Track/Track'
 // from Playlist: tracks={props.playlistTracks} onAdd={addTrack}, onRemove={props.onRemove} isRemoval={true} 
 const TrackList = ( {tracks, onAdd, onRemove, isRemoval}) => {
 
-console.log('In TrackList', tracks, onAdd)
-
  let listOfTracks = tracks.map(track => {
-        return <Track 
+        return (<Track 
           track={track}
           key={track.id} 
           onAdd={onAdd}
           onRemove={onRemove}
           isRemoval={isRemoval}
-          />
+          />)
       })
-  return <div className="TrackList">
-        {listOfTracks}
-  </div>;
+  return <div className="TrackList"> {listOfTracks} </div>;
 
 };
 
