@@ -1,4 +1,4 @@
-const clientId = '43ae29847337457081c0ffbfcba91328';
+const clientId = '[Your clientId]';
 
 const redirectUri = 'http://localhost:8889/callback/';
 //const redirectUri= 'http://nwjammming.surge.sh';
