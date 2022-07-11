@@ -3,15 +3,9 @@ import './App.css';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist.js';
-import Spotify from '../../utils/Spotify.js';
+import Spotify from '../../utils/Spotify';
 
 const App = () => {
-  // class state:
-  // this.state = {
-  //   searchResults: [],
-  //   playlistName: 'New Playlist',
-  //   playlistTracks: [],
-  // };
 
   //functional state:
   const [playlistName, setPlaylistName] = useState('');
