@@ -3,7 +3,7 @@ import './App.css';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist.js';
-import Spotify from '../../util/Spotify.js';
+import Spotify from '../../utils/Spotify.js';
 
 const App = () => {
   // class state:
