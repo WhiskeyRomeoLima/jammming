@@ -18,7 +18,7 @@ const Spotify = {
     if (accessTokenMatch && expiresInMatch) {
       accessToken = accessTokenMatch[1];
       console.log(`In Spotify.js, accessToken =  ${accessToken}`);
-
+      
       const expiresIn = Number(expiresInMatch[1]);
       window.setTimeout(() => (accessToken = ''), expiresIn * 1000);
       window.history.pushState('Access Token', null, '/');
@@ -57,7 +57,7 @@ const Spotify = {
     const headers = { Authorization: `Bearer ${accessToken}` };
     let userId;
 
-    return fetch('https://api.spotify.com/v1/me', { headers: headers })
+    return fetch('https://api.spotify.com/v1/me', {headers: headers})
       .then((response) => response.json())
       .then((jsonResponse) => {
         userId = jsonResponse.id;
