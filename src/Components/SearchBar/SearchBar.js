@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './SearchBar.css';
 
 const SearchBar = ({ onSearch}) => {
-  const [searchTerm, setSearchTerm] = useState('elvis');
+  const [searchTerm, setSearchTerm] = useState();
 
   const search = () => {
     //this.props.onSearch(this.state.term);
@@ -14,17 +14,9 @@ const SearchBar = ({ onSearch}) => {
     setSearchTerm(e.target.value)
   }
 
-    const handleEnterpress = (e) => {
-      // console.log(e.keyCode);
-      
-      // if (e.keyCode === 13) {
-      //   search()
-      // }
-    };
-
   return (
     <div className="SearchBar">
-      <input placeholder="Enter A Song, Album, or Artist" onChange={handleTermChange} onKeyPress={handleEnterpress} />
+      <input placeholder="Enter A Song, Album, or Artist" defaultValue='Elvis' onChange={handleTermChange}  />
       <button className="SearchButton" onClick={search}>
         SEARCH
       </button>

@@ -25,7 +25,7 @@ const Track = ({isRemoval, onAdd, onRemove, track}) => {
     }
 
     const removeTrack = () => {
-      onRemove(track);
+      onRemove(track);  
     }
 
     //props = track.name, track.artist, track.album
