@@ -8,9 +8,9 @@ import Spotify from '../../utils/Spotify';
 const App = () => {
 
   //functional state:
-  const [playlistName, setPlaylistName] = useState('');
+  const [playlistName, setPlaylistName] = useState('Playlist');
   const [TrackList, setTrackList] = useState([]);
-  const [searchResults, setsearchResults] = useState([]);
+  const [searchResults, setsearchResults] = useState(['El']);
   const [playlistTracks, setPlaylistTracks] = useState([]);
   
   const addTrack = (track) => {
@@ -36,8 +36,9 @@ const App = () => {
     const trackURIs = playlistTracks.map(track => track.uri)
 
     Spotify.savePlaylist(playlistName, trackURIs).then(() => {
-      setPlaylistName('New Playlist')
-      setPlaylistTracks([])
+      setPlaylistTracks([]);
+      setPlaylistName('New Playlist'); 
+      //setPlaylistName will not works if you use the 'defaultValue' attribute rather than 'value' attribute
     });
 
   };

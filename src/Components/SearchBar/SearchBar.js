@@ -16,7 +16,7 @@ const SearchBar = ({ onSearch}) => {
 
   return (
     <div className="SearchBar">
-      <input placeholder="Enter A Song, Album, or Artist" defaultValue='Elvis' onChange={handleTermChange}  />
+      <input placeholder="Enter A Song, Album, or Artist" onChange={handleTermChange}  />
       <button className="SearchButton" onClick={search}>
         SEARCH
       </button>

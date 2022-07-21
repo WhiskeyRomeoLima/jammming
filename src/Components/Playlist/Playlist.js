@@ -5,15 +5,14 @@ import TrackList from '../TrackList/TrackList'
 const Playlist = ({playlistName, playlistTracks, onNameChange, onAdd, onRemove, onSave}) => {
   
   const handleNameChange = (event) => {
-    onNameChange(event.target.value);
+    onNameChange(event.target.value)
   }
   
   return (
     <div className="Playlist">
       <input
         id="Playlist-name"
-        placeholder='Playlist Name'
-        defaultValue={playlistName}
+        value={playlistName}
         onChange={handleNameChange} />
       <TrackList
         tracks={playlistTracks}
