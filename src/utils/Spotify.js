@@ -1,3 +1,5 @@
+//https://discuss.codecademy.com/t/code-review-jammming-with-a-twist/591805
+//This code came for DavyK17 at code academy.  I replaced the awful Codecademy version
 const clientId = '43ae29847337457081c0ffbfcba91328';
 
 const redirectUri = 'http://localhost:8889/callback/';
